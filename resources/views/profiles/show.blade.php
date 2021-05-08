@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<x-app>
 
     <header class="mb-6 relative">
         <img src="/images/default-profile-banner.jpg" alt="" class="mb-2">
@@ -35,4 +33,6 @@
     @include('_timeline',[
     'tweets'=>$user->tweets
     ])
-@endsection
+    
+</x-app>
+Nested Layout Files with Components
