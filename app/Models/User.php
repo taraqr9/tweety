@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, Followable;
 
     /**
      * The attributes that are mass assignable.
@@ -41,10 +41,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function getAvatarAttribute(){
-        return 'https://i.pravatar.cc/200?u='.$this->email;
+    public function getAvatarAttribute()
+    {
+        return 'https://i.pravatar.cc/200?u=' . $this->email;
     }
-    public function timeline(){
+    public function timeline()
+    {
         // return Tweet::where('user_id',$this->id)->latest()->get();
 
         // include all of the user's tweets
@@ -53,25 +55,18 @@ class User extends Authenticatable
 
         $friends = $this->follows()->pluck('id');
 
-        return Tweet::whereIn('user_id',$friends)
-        ->orWhere('user_id',$this->user)
-        ->latest()->get();
+        return Tweet::whereIn('user_id', $friends)
+            ->orWhere('user_id', $this->user)
+            ->latest()->get();
     }
 
-    public function tweets(){
-        return $this->hasMany(Tweet::class);
-    }
-
-    public function follow(User $user){
-        return $this->follows()->save($user);
-    }
-    public function follows(){
-        return $this->belongsToMany(User::class,'follows','user_id','following_user_id');
-    }
-
-    public function getRouteKeyName()
+    public function tweets()
     {
-        return 'name';
+        return $this->hasMany(Tweet::class)->latest();
+    }
+
+    public function path()
+    {
+        return route('profile', $this->name);
     }
 }
-
