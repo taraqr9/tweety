@@ -75,8 +75,7 @@
             </label>
 
             <div class="flex">
-                <input type="file" class="form-control bg-gray-400" name="avatar" id="avatar" aria-describedby="helpId"
-                    required>
+                <input type="file" class="form-control bg-gray-400" name="avatar" id="avatar" aria-describedby="helpId">
 
                 <img src="{{ $user->avatar}}" alt="Your avatar" width="40">
             </div>
