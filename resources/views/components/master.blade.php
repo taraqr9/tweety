@@ -34,6 +34,9 @@
 
         {{ $slot }}
     </div>
+
+    {{-- The script will load page more faster --}}
+    <script src="http://unpkg.com/turbolinks"></script>
 </body>
 
 </html>
