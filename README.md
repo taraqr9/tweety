@@ -12,7 +12,7 @@ php artisan db:seed
 
 
 ## Getting Started
-To get started  you can simply clone this `bigdata` repository.
+To get started  you can simply clone this `tweety` repository.
 
 Clone the `tweety` repository using git:
 
@@ -23,7 +23,7 @@ cd tweety
 
 After the clone project first give a command on the console ->
 ```bash
-composer dump-autoload 
+composer update
 ```
 
 
