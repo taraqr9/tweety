@@ -10,6 +10,12 @@ Then give the command into the command line ->
 php artisan db:seed
 ```
 
+![Screenshot (683)](https://user-images.githubusercontent.com/37486791/128085682-d1decafb-ae85-46f3-a0d8-1b594a4600a2.png)
+![Screenshot (684)](https://user-images.githubusercontent.com/37486791/128085693-cded27a3-90ad-457d-ae48-b347d98b8ae9.png)
+![Screenshot (685)](https://user-images.githubusercontent.com/37486791/128085699-f6a4fb04-e55f-4cd4-b4bb-b6589d41ffa4.png)
+![Screenshot (686)](https://user-images.githubusercontent.com/37486791/128085705-ef2a5edb-7723-4c4f-a30d-c765c87dfc7c.png)
+
+
 
 ## Getting Started
 To get started  you can simply clone this `tweety` repository.
